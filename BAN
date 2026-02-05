@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buccaneers Confraternity | Alora Sealords</title>
+    <style>
+        :root {
+            --yellow: #ffcc00;
+            --dark: #1a1a1a;
+            --accent: #ffd700;
+            --white: #ffffff;
+            --gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--yellow);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .anchor-icon {
+            width: 30px;
+            height: 30px;
+            fill: var(--yellow);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li { margin-left: 20px; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--yellow);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0 100 Q 50 50 100 100" stroke="yellow" fill="none" opacity="0.2"/></svg>');
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            border-bottom: 5px solid var(--yellow);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            color: var(--yellow);
+            text-shadow: 3px 3px 0px #000;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            font-style: italic;
+        }
+
+        .ship-art {
+            width: 150px;
+            margin-bottom: 20px;
+            fill: var(--yellow);
+        }
+
+        .btn {
+            background: var(--yellow);
+            color: var(--dark);
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            border: 2px solid var(--yellow);
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--yellow);
+        }
+
+        /* Sections */
+        section { padding: 80px 10%; border-bottom: 1px solid var(--gray); }
+        .title { color: var(--yellow); margin-bottom: 30px; text-transform: uppercase; font-size: 2rem; }
+
+        /* Sally Time & Odas */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #222;
+            padding: 40px;
+            border-left: 5px solid var(--yellow);
+        }
+
+        .card h3 { color: var(--yellow); margin-bottom: 15px; }
+
+        /* Contact */
+        #contact { background: var(--yellow); color: var(--dark); }
+        #contact .title { color: var(--dark); }
+        .contact-content { display: flex; flex-wrap: wrap; gap: 50px; }
+
+        footer {
+            background: #000;
+            padding: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <svg class="anchor-icon" viewBox="0 0 24 24"><path d="M7,15 L5,15 C5,18.86 8.13,22 12,22 C15.86,22 19,18.86 19,15 L17,15 C17,17.76 14.76,20 12,20 C9.24,20 7,17.76 7,15 M12,2 L10,2 L10,4 L7,4 L7,6 L10,6 L10,11 L5,11 L5,9 L3,9 L3,14 L5,14 L5,12 L10,12 L10,15 L14,15 L14,12 L19,12 L19,14 L21,14 L21,9 L19,9 L19,11 L14,11 L14,6 L17,6 L17,4 L14,4 L14,2 L12,2 Z"/></svg>
+            <span class="logo">BCN SEALORDS</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#sally">Sally Time</a></li>
+            <li><a href="#odas">Odas</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <svg class="ship-art" viewBox="0 0 64 64"><path d="M32 4 L28 20 L36 20 L32 4 M10 40 L54 40 L48 56 L16 56 L10 40 M30 20 L30 40 M34 20 L34 40"/></svg>
+        <h1>ALORA SEALORDS</h1>
+        <p>"The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures..." — Psalm 23</p>
+        <a href="#contact" class="btn">No Price No Pay</a>
+    </section>
+
+    <section id="about">
+        <h2 class="title">About the Galleon</h2>
+        <p>A brotherhood forged in the rough seas, the Buccaneers Confraternity stands on the pillars of discipline, brotherhood, and equity. We sail as one, ensuring that the legacy of the anchor remains unshaken.</p>
+    </section>
+
+    <section id="sally">
+        <div class="grid-cards">
+            <div class="card">
+                <h2 class="title">Sally Time</h2>
+                <p>When the tide rises, the brethren assemble. Our sailing is a time of reflection, bonding, and maritime tradition. All deckhands on deck.</p>
+            </div>
+            <div class="card" id="odas">
+                <h2 class="title">Odas Is Odas</h2>
+                <p>Discipline is our compass. In this brotherhood, hierarchy is respected and instructions are absolute. The ship moves only when the order is clear.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="title">The Signal</h2>
+        <div class="contact-content">
+            <div>
+                <h3>Location</h3>
+                <p>The Grand Galleon HQ</p>
+                <p>Maritime Way, Victoria Island, Lagos</p>
+            </div>
+            <div>
+                <h3>Communication</h3>
+                <p>Phone: +234 800 BUCCANEER</p>
+                <p>Socials: @AloraSealords</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Buccaneers Confraternity. All Rights Reserved. Broadside On!</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
 
